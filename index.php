@@ -4,7 +4,7 @@
 // 1. 初始化
  $ch = curl_init();
  // 2. 设置选项，包括URL
- curl_setopt($ch,CURLOPT_URL,"http://www.gnu.org/");
+ curl_setopt($ch,CURLOPT_URL,"http://www.ip138.com/");
  curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
  curl_setopt($ch,CURLOPT_HEADER,0);
  // 3. 执行并获取HTML文档内容
