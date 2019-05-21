@@ -3,8 +3,6 @@
   <title>qz test</title>
  </head>
 <body>
-<?php
-echo '<p><a href="/cctv_list.php">CCTV list</a></p>'
-?>
+<p><a href="/cctv_list.php"><h1>CCTV list</h1></a></p>
 </body>
 </html>
