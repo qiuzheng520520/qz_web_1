@@ -11,11 +11,11 @@
  curl_setopt($ch,CURLOPT_HEADER,0);
  
   $headers = array(
-    "User-Agent":"0.0.4 rv:0.0.3 (iPad; iPhone OS 9.3.2; zh_CN)",
-    "Host":"xjhz.me"
-	"Connection":"close"
-	"Content-Length":"0"
-	"Accept-Encoding":"gzip"
+    'User-Agent:0.0.3 (iPad; iPhone OS 9.3.2; zh_CN)',
+    'Host:xjhz.me',
+	'Connection:close',
+	'Content-Length:0',
+	'Accept-Encoding:gzip'
     );
  
  //设置header头
@@ -23,7 +23,7 @@
  //设置post方式提交
  curl_setopt($ch, CURLOPT_POST, 1);
  //设置post数据
-	curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
+ //curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
  
  // 3. 执行并获取HTML文档内容
  $output = curl_exec($ch);
