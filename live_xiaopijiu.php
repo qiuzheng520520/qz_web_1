@@ -31,6 +31,8 @@
  echo "CURL Error:".curl_error($ch);
  }
  
+$output=str_replace('\\', '', $output);
+ 
  echo $output;
  // 4. ÊÍ·Åcurl¾ä±ú
  curl_close($ch);
