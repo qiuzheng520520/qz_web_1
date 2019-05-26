@@ -34,7 +34,31 @@
  //把http地址中的'\'去除掉
 $output=str_replace('\\', '', $output);
  
- echo $output;
+ //给http地址添加链接
+ function text2links($str='') {
+  if($str=='' or !preg_match('/(http|www\.|@)/i', $str)) { return $str; }
+  $lines = explode("\n", $str); $new_text = '';
+  while (list($k,$l) = each($lines)) {
+    // replace links:
+    $l = preg_replace("/([ \t]|^)www\./i", "\\1http://www.", $l);
+    $l = preg_replace("/([ \t]|^)ftp\./i", "\\1ftp://ftp.", $l);
+    $l = preg_replace("/(http:\/\/[^ )\r\n!]+)/i",
+      "<a href=\"\\1\">\\1</a>", $l);
+    $l = preg_replace("/(https:\/\/[^ )\r\n!]+)/i",
+      "<a href=\"\\1\">\\1</a>", $l);
+    $l = preg_replace("/(ftp:\/\/[^ )\r\n!]+)/i",
+      "<a href=\"\\1\">\\1</a>", $l);
+    $l = preg_replace(
+      "/([-a-z0-9_]+(\.[_a-z0-9-]+)*@([a-z0-9-]+(\.[a-z0-9-]+)+))/i",
+      "<a href=\"mailto:\\1\">\\1</a>", $l);
+    $new_text .= $l."\n";
+  }
+  return $new_text;
+}
+ 
+ print text2links($output);
+ //echo $output;
+ 
  // 4. 释放curl句柄
  curl_close($ch);
  ?>
