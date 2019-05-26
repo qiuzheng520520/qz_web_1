@@ -31,6 +31,7 @@
  echo "CURL Error:".curl_error($ch);
  }
  
+ //把http地址中的'\'去除掉
 $output=str_replace('\\', '', $output);
  
  echo $output;
