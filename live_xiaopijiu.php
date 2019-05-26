@@ -37,7 +37,7 @@ $output=str_replace('\\', '', $output);
  //给http地址添加链接
  function text2links($str='') {
   if($str=='' or !preg_match('/(http|www\.|@)/i', $str)) { return $str; }
-  $lines = explode("}", $str); $new_text = '';
+  $lines = explode("play_url", $str); $new_text = '';
   while (list($k,$l) = each($lines)) {
     // replace links:
     $l = preg_replace("/([ \t]|^)www\./i", "\\1http://www.", $l);
