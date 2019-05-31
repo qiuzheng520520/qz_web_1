@@ -41,7 +41,7 @@ $output=str_replace('\\', '', $output);
   while (list($k,$l) = each($lines)) {
     $aaa = preg_replace("/(http:\/\/.*flv?)/i",
       "<a href=\"\\1\">\\1</a>", $l);
-	$bbb = preg_replace("/(http:\/\/[^\"]+png?)/i",
+	$bbb = preg_replace("/(http:\/\/.*png?)/i",
 	 "<img src=\"\\1\"  alt=\"aaa\" height=\"200\" width=\"200\" />",$l);
     $new_text .= $aaa.$bbb."\n";
   }
