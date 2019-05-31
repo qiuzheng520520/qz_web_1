@@ -50,7 +50,7 @@ $output=str_replace('\\', '', $output);
       // "<a href=\"\\1\">\\1</a>", $l);
     // $l = preg_replace(
       // "/([-a-z0-9_]+(\.[_a-z0-9-]+)*@([a-z0-9-]+(\.[a-z0-9-]+)+))/i",
-      "<a href=\"mailto:\\1\">\\1</a>", $l);
+      // "<a href=\"mailto:\\1\">\\1</a>", $l);
     $new_text .= $l."\n";
   }
   return $new_text;
