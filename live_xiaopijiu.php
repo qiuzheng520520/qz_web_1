@@ -43,7 +43,9 @@ $output=str_replace('\\', '', $output);
       "<a href=\"\\1\">\\1</a>", $l);
 	$bbb = preg_replace("/(http:\/\/.*png?)/i",
 	 "<img src=\"\\1\"  alt=\"aaa\" height=\"200\" width=\"200\" />",$l);
-    $new_text .= $aaa.$bbb."\n";
+	$ccc = preg_replace("/(http:\/\/.*jpg?)/i",
+	 "<img src=\"\\1\"  alt=\"aaa\" height=\"200\" width=\"200\" />",$l);
+    $new_text .= $aaa.$bbb.$ccc"\n";
   }
   return $new_text;
 }
