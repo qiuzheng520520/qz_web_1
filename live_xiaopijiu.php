@@ -42,7 +42,7 @@ $output=str_replace('\\', '', $output);
     // $l = preg_replace("/(http:\/\/[^\"]+flv?)/i",
       // "<a href=\"\\1\">\\1</a>", $l);
 	$l = preg_replace("/(http:\/\/[^\"]+flv?)/i",
-    "<EMBED SRC=\"\\1\" autostart=false loop=false width=350 height=250>", $l);
+    "<EMBED SRC=\"\\1\" autostart=\"false\" loop=\"false\" width=\"350\" height=\"250\" />", $l);
 	$l = preg_replace("/(http:\/\/[^\"]+png?)/i",
 	 "<img src=\"\\1\"  alt=\"aaa\" height=\"200\" width=\"200\" />",$l);
 	$l = preg_replace("/(http:\/\/[^\"]+jpg?)/i",
