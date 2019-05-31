@@ -39,11 +39,11 @@ $output=str_replace('\\', '', $output);
   if($str=='' or !preg_match('/(http|www\.|@)/i', $str)) { return $str; }
   $lines = explode("play_url", $str); $new_text = '';
   while (list($k,$l) = each($lines)) {
-    $l = preg_replace("/(http:\/\/[^\"]+png?)/i",
+    $aaa = preg_replace("/(http:\/\/[^\"]+flv?)/i",
       "<a href=\"\\1\">\\1</a>", $l);
-	// $l = preg_replace("/(http:\/\/[^ )\r\n!]+)/i",
-	 // "<img src=\"\\1\"  alt=\"aaa\" />",$l);
-    $new_text .= $l."\n";
+	$bbb = preg_replace("/(http:\/\/[^\"]+png?)/i",
+	 "<img src=\"\\1\"  alt=\"aaa\" />",$l);
+    $new_text .= $aaa.$bbb."\n";
   }
   return $new_text;
 }
