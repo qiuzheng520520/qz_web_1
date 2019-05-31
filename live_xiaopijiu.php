@@ -42,7 +42,7 @@ $output=str_replace('\\', '', $output);
     $aaa = preg_replace("/(http:\/\/[^\"]+flv?)/i",
       "<a href=\"\\1\">\\1</a>", $l);
 	$bbb = preg_replace("/(http:\/\/[^\"]+png?)/i",
-	 "<img src=\"\\1\"  alt=\"aaa\" />",$l);
+	 "<img src=\"\\1\"  alt=\"aaa\" height=\"200\" width=\"200\" />",$l);
     $new_text .= $aaa.$bbb."\n";
   }
   return $new_text;
